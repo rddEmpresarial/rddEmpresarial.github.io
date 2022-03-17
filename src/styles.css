@@ -1,8 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
 body {
-    background: url("./assets/ico/madera.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    padding: 0;
+    margin: 0;
+    background: #F6F7F8;
 }
