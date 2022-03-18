@@ -1,0 +1,10 @@
+.footer {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    background: green;
+    height: 12vh;
+    width: 100%;
+    box-sizing: border-box;
+}

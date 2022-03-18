@@ -1,0 +1,9 @@
+.contenido {
+    display: block;
+    float: right;
+    margin: 0;
+    padding: 0;
+    background: blue;
+    height: 100vh;
+    width: 85%;
+}
