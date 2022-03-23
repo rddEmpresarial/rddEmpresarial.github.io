@@ -1,73 +1,58 @@
-import {PageFlip} from 'page-flip';
+function loadApp() {
 
-var tempo = function() {
-  document.addEventListener('DOMContentLoaded', function() {
+	// Create the flipbook
 
-    var lol = window.innerWidth * .43;
-    var lol2 = window.innerHeight * .42;
-  const pageFlip = new PageFlip(
-      document.getElementById("demoBookExample"),
-      {
-          width: lol/2, // base page width
-          height: lol2, // base page height
+	var anchoContenido = $(".contenido").innerWidth();
+	var ancho = anchoContenido * .98;
+	var altoContenido = $(".contenido").innerHeight();
+	var alto = altoContenido * .95;
 
-          size: "stretch",
-          // set threshold values:
-          minWidth: 0,
-          maxWidth: lol,
-          minHeight: 420,
-          maxHeight: 1350,
+	$('.flipbook').turn({
+			// Width
 
-          maxShadowOpacity: 0.2, // Half shadow intensity
-          showCover: true,
-          mobileScrollSupport: false // disable content scrolling on mobile devices
-      }
-  );
+			width:ancho,
+			
+			// Height
 
-    var botonTelefono = document.getElementsByClassName("botonTelefono");
-    for(let i = 0; i < botonTelefono.length; i++)
-     {
-         botonTelefono[i].addEventListener("click", function() {
-             var pagina = parseInt(botonTelefono[i].id.replace("pag", ""));
-             pageFlip.flip(pagina, 'top');
-         });
-     }
+			height:alto,
 
-  // load pages
-  pageFlip.loadFromHTML(document.querySelectorAll(".page"));
+			// Elevation
 
-  document.querySelector(".page-total").innerText = pageFlip.getPageCount();
-  document.querySelector(
-      ".page-orientation"
-  ).innerText = pageFlip.getOrientation();
+			elevation: 50,
+			
+			// Enable gradients
 
-  document.querySelector(".btn-prev").addEventListener("click", () => {
-      pageFlip.flipPrev(); // Turn to the previous page (with animation)
-  });
+			gradients: true,
+			
+			// Auto center this flipbook
 
-  document.querySelector(".btn-next").addEventListener("click", () => {
-      pageFlip.flipNext(); // Turn to the next page (with animation)
-  });
+			autoCenter: true
 
-  // triggered by page turning
-  pageFlip.on("flip", (e) => {
-      document.querySelector(".page-current").innerText = e.data + 1;
-  });
+	});
 
-  // triggered when the state of the book changes
-  pageFlip.on("changeState", (e) => {
-      document.querySelector(".page-state").innerText = e.data;
-  });
+	$(".flipbook-viewport .flipbook").css("left", -parseInt(ancho / 2));
+	$(".flipbook-viewport .flipbook").css("top", -parseInt(alto / 2));
 
-  // triggered when page orientation changes
-  pageFlip.on("changeOrientation", (e) => {
-      document.querySelector(".page-orientation").innerText = e.data;
-  });
-  
-});
+	window.addEventListener("resize", function() {
+		var anchoContenido = $(".contenido").innerWidth();
+		var ancho = anchoContenido * .98;
+		var altoContenido = $(".contenido").innerHeight();
+		var alto = altoContenido * .95;
+
+		$('.flipbook').turn('size', ancho, alto);
+		$(".flipbook-viewport .flipbook").css("left", -parseInt(ancho / 2));
+		$(".flipbook-viewport .flipbook").css("top", -parseInt(alto / 2));
+
+	});
+
 }
 
+// Load the HTML4 version if there's not CSS transform
 
-var funcion = new tempo();
-
-export { funcion };
+yepnope({
+	test : Modernizr.csstransforms,
+	yep: ['../../'],
+	nope: ['turn.html4.min.js'],
+	both: ['css/basic.css'],
+	complete: loadApp
+});

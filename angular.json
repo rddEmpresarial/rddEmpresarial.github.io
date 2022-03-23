@@ -29,7 +29,13 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": ["src/assets/js/main.js"]
+            "scripts": [
+              "src/assets/js/jquery.min.1.7.js",
+              "src/assets/js/modernizr.2.5.3.min.js",
+              "src/assets/js/turn.html4.min.js",
+              "src/assets/js/turn.js",
+              "src/assets/js/main.js"
+            ]
           },
           "configurations": {
             "production": {
