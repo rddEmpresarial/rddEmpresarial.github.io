@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import url("https://fonts.googleapis.com/css?family=Inter");
 
 .contenido {
     display: block;
@@ -9,8 +10,101 @@
     width: 86%;
 }
 
-.contenido h1 {
-	font-family: Quicksand;
+.clearfix {
+    clear: both !important;
+	float: none !important;
+}
+
+.contenido h2 {
+	font-family: "Quicksand";
+	text-align: center;
+	font-size: 2.5vh;
+	margin-left: 2.5vw;
+	margin-right: 2.5vw;
+	margin-bottom: 3vh;
+	margin-top: 4vh;
+	padding-bottom: 0.5vh;
+	border-bottom: 0.3vh solid #7BE0AD;
+}
+
+.contenido h3 {
+	font-family: "Quicksand";
+	text-align: left;
+	font-size: 2vh;
+	margin-left: 2.5vw;
+	margin-right: 2.5vw;
+	margin-bottom: 1.5vh;
+	margin-top: 2.5vh;
+}
+
+.contenido .primero {
+	margin-top: 11.5vh;
+}
+
+.contenido p, .contenido ul, .contenido table {
+	font-family: "Inter";
+	text-align: justify;
+	margin-left: 2.5vw;
+	margin-right: 2.5vw;
+	margin-bottom: 1vh;
+	font-size: 1.6vh;
+}
+
+.contenido a {
+	display: block;
+	max-width: min-content;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.contenido img.post-it {
+	display: block;
+	width: 16vw;
+}
+
+.contenido .dos-post-it {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: fit-content;
+}
+
+.contenido .dos-post-it a {
+	display: block;
+	float: left;
+}
+
+.contenido .dos-post-it img {
+	width: 16vw;
+}
+
+.contenido ul {
+	list-style-type: circle;
+}
+
+.contenido ul li {
+	margin-bottom: 0.7vh;
+}
+
+.contenido table{
+	border-collapse: collapse;
+}
+.contenido table th, .contenido table td{
+	border:  0.1vh solid #7BE0AD;
+	text-align: center;
+	padding: 0.5vh;
+}
+
+.contenido table .izquierda{
+	text-align: left;
+}
+
+.contenido table caption {
+	font-family: "Inter";
+	text-align: center;
+	font-size: 1.4vh;
+	margin-top: 0.5vh;
+	margin-bottom: 0.5vh;
 }
 
 .flipbook-viewport {
@@ -35,6 +129,8 @@
 	background-color:white;
 	background-repeat:no-repeat;
 	background-size:100% 100%;
+	border: 1px solid black;
+	box-sizing: border-box;
 }
 
 .flipbook .page{

@@ -8,26 +8,18 @@ function loadApp() {
 	var alto = altoContenido * .95;
 
 	$('.flipbook').turn({
-			// Width
-
-			width:ancho,
-			
-			// Height
-
-			height:alto,
-
-			// Elevation
-
-			elevation: 50,
-			
-			// Enable gradients
-
+			//Centrar el libro automáticamente si solamente se ve una hoja: true: centrar, false: no centrar
+			autoCenter: true,
+			//Cuántas hojas se ven al mismo tiempo: single: 1, double: 2
+			display: "double",
+			//Duración en milisegundos de la animación al dar click para cambiar hoja
+			duration: 600,
+			//Mostrar gradiantes y sombras durante la animación de cambio de hoja: true: mostrar, false: no mostrar
 			gradients: true,
-			
-			// Auto center this flipbook
-
-			autoCenter: true
-
+			//Altura en pixeles del libro
+			height:alto,
+			// Ancho en pixeles del libro
+			width:ancho
 	});
 
 	$(".flipbook-viewport .flipbook").css("left", -parseInt(ancho / 2));
