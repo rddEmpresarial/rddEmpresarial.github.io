@@ -37,6 +37,18 @@ function loadApp() {
 
 	});
 
+	var botonesNavegacion = $(".cuadro-temas li");
+	for(let i=0; i<botonesNavegacion.length; i++) {
+		$(botonesNavegacion[i]).click(function(){
+			var id = parseInt(botonesNavegacion[i].id.replace("p", ""));
+			$('.flipbook').turn("page", id);
+			for(let j=0; j<botonesNavegacion.length; j++) {
+				$(botonesNavegacion[j]).removeClass("seleccionado");	
+			}
+			$(botonesNavegacion[i]).addClass("seleccionado");
+		});
+	}
+
 }
 
 // Load the HTML4 version if there's not CSS transform

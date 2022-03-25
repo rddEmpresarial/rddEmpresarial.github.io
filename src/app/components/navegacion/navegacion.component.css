@@ -37,6 +37,11 @@
     margin-left: 4vh;
 }
 
+.unidades li:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
 .unidades li.seleccionado {
     margin-left: 0;
     padding-left: 5vw;
@@ -78,11 +83,20 @@
     font-family: "Quicksand";
 }
 
+.cuadro-temas .subtema {
+    padding-left: 2vw;
+}
+
 .cuadro-temas li{
     padding-top: 1vh;
     padding-bottom: 1vh;
     padding-left: 1vw;
     padding-right: 1vw;
+}
+
+.cuadro-temas li:hover {
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .cuadro-temas li.seleccionado {

@@ -15,6 +15,18 @@
 	float: none !important;
 }
 
+.contenido img {
+	display: block;
+	image-rendering: -moz-crisp-edges;         /* Firefox */
+	image-rendering:   -o-crisp-edges;         /* Opera */
+	image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+	image-rendering: crisp-edges;
+	-ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1vh;
+}
+
 .contenido h2 {
 	font-family: "Quicksand";
 	text-align: center;
@@ -76,6 +88,7 @@
 
 .contenido .dos-post-it img {
 	width: 16vw;
+	margin: 0;
 }
 
 .contenido ul {
@@ -148,7 +161,6 @@
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	margin:0;
 }
 
 .flipbook-viewport .shadow{
@@ -162,4 +174,30 @@
 	-o-box-shadow:0 0 20px #ccc;
 	-ms-box-shadow:0 0 20px #ccc;
 	box-shadow:0 0 20px #ccc;
+}
+
+.invisible {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 5vw;
+	height: 10vh;
+	z-index: 10;
+}
+
+.invisible.izquierda {
+	left: 0;
+	z-index: 10;
+}
+
+.hard .invisible {
+	height: 100vh;
+}
+
+.hard .invisible.izquierda {
+	left: 0;
+}
+
+.invisible:hover {
+	cursor: pointer !important;
 }
