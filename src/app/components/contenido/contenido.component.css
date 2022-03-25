@@ -53,6 +53,10 @@
 	margin-top: 11.5vh;
 }
 
+.contenido .primero2 {
+	margin-top: 4vh;
+}
+
 .contenido p, .contenido ul, .contenido table {
 	font-family: "Inter";
 	text-align: justify;
@@ -188,6 +192,10 @@
 .invisible.izquierda {
 	left: 0;
 	z-index: 10;
+}
+
+.invisible.superior {
+	top: 0;
 }
 
 .hard .invisible {

@@ -19,7 +19,23 @@ function loadApp() {
 			//Altura en pixeles del libro
 			height:alto,
 			// Ancho en pixeles del libro
-			width:ancho
+			width:ancho,
+			when: {
+				turned: function(event, page, pageObj) {
+					var botonesNavegacion = $(".cuadro-temas li");
+					for(let i=0; i<botonesNavegacion.length; i++) {
+						if(parseInt(botonesNavegacion[i].id.replace("p", "")) == page) {
+							$(botonesNavegacion[i]).addClass("seleccionado");
+						}
+						else if(page == 2) {
+							$("#p3").addClass("seleccionado");
+						}
+						else {
+							$(botonesNavegacion[i]).removeClass("seleccionado");	
+						}
+					}
+				}
+			}
 	});
 
 	$(".flipbook-viewport .flipbook").css("left", -parseInt(ancho / 2));
