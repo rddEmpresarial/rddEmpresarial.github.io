@@ -45,6 +45,7 @@
 .unidades li.seleccionado {
     margin-left: 0;
     padding-left: 5vw;
+    
 }
 
 .color-unidad1{
@@ -101,6 +102,7 @@
 
 .cuadro-temas li.seleccionado {
     border: 1px solid #405363;
+    font-weight: bold;
 }
 
 .cuadro-temas::-webkit-scrollbar-track {

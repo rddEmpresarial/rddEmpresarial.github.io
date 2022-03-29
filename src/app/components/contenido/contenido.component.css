@@ -116,7 +116,7 @@
 	text-align: left;
 }
 
-.contenido table caption {
+.contenido table caption, .contenido figcaption {
 	font-family: "Inter";
 	text-align: center;
 	font-size: 1.4vh;
@@ -208,4 +208,29 @@
 
 .invisible:hover {
 	cursor: pointer !important;
+}
+
+.cubierta{
+	background-color: #7BE0AD !important;
+}
+
+.cubierta img {
+	height: 100%;
+	margin-right: 0;
+}
+
+.contenido .referencia {
+	display: inline;
+	margin: 0 !important;
+	padding: 0 !important;
+	font-family: "Inter";
+	margin-left: 2.5vw;
+	margin-right: 2.5vw;
+	margin-bottom: 1vh;
+	font-size: 1.6vh !important;
+	padding-left: 3vw !important;
+}
+
+.contenido .referencia {
+	color: #1cb367 !important;
 }

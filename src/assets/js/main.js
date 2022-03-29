@@ -24,15 +24,21 @@ function loadApp() {
 				turned: function(event, page, pageObj) {
 					var botonesNavegacion = $(".cuadro-temas li");
 					for(let i=0; i<botonesNavegacion.length; i++) {
-						if(parseInt(botonesNavegacion[i].id.replace("p", "")) == page) {
-							$(botonesNavegacion[i]).addClass("seleccionado");
+						$(botonesNavegacion[i]).removeClass("seleccionado");
+					}
+					if(page >= 2) {
+						var aux = page;
+						if(page == 2) {
+							var aux = 3;
 						}
-						else if(page == 2) {
-							$("#p3").addClass("seleccionado");
+						var pagina = "p" + aux;
+						var existe = document.getElementById(pagina);
+						while(existe == null){
+							aux--;
+							pagina = "p" + aux;
+							existe = document.getElementById(pagina);
 						}
-						else {
-							$(botonesNavegacion[i]).removeClass("seleccionado");	
-						}
+						$("#" + pagina).addClass("seleccionado");
 					}
 				}
 			}
