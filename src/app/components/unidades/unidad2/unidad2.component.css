@@ -36,7 +36,7 @@
 	margin-bottom: 3vh;
 	margin-top: 4vh;
 	padding-bottom: 0.5vh;
-	border-bottom: 0.3vh solid #7BE0AD;
+	border-bottom: 0.3vh solid #AEE5D8;
 }
 
 .contenido h3 {
@@ -118,7 +118,7 @@
 	border-collapse: collapse;
 }
 .contenido table th, .contenido table td{
-	border:  0.1vh solid #7BE0AD;
+	border:  0.1vh solid #AEE5D8;
 	text-align: center;
 	padding: 0.5vh;
 }
@@ -222,7 +222,7 @@
 }
 
 .cubierta{
-	background-color: #7BE0AD !important;
+	background-color: #AEE5D8 !important;
 }
 
 .cubierta img {
