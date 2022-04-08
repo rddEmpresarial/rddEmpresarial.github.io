@@ -1,15 +1,15 @@
 <div class="navegacion">
     <ul class="unidades">
-        <li class="color-unidad1 seleccionado">Unidad 1</li>
-        <li class="color-unidad2">Unidad 2</li>
-        <li class="color-unidad3">Unidad 3</li>
-        <li class="color-unidad4">Unidad 4</li>
-        <li class="color-unidad5">Unidad 5</li>
+        <li (click)="cambiarUnidad(1)" class="color-unidad1 seleccionado">Unidad 1</li>
+        <li (click)="cambiarUnidad(2)" class="color-unidad2">Unidad 2</li>
+        <li (click)="cambiarUnidad(3)" class="color-unidad3">Unidad 3</li>
+        <li (click)="cambiarUnidad(4)" class="color-unidad4">Unidad 4</li>
+        <li (click)="cambiarUnidad(5)" class="color-unidad5">Unidad 5</li>
     </ul>
 
     <div class="clearfix"></div>
     
-    <ul class="cuadro-temas color-unidad1">
+    <ul class="cuadro-temas color-unidad1" *ngIf="unidad==1">
         <li id="p3">Introducción</li>
         <li id="p4">Unidad de competencia</li>
         <li id="p5">1.1. La empresa</li>
@@ -22,6 +22,22 @@
         <li id="p18">Cierre de la unidad temática</li>
         <li id="p19">Evaluación</li>
         <li id="p20">Referencias</li>
+    </ul>
+    
+    <ul class="cuadro-temas color-unidad2" *ngIf="unidad==2">
+        <li id="p3">Introducción</li>
+        <li id="p4">2.1 La información financiera</li>
+        <li id="p4">2.2 Las Normas de Información Financiera (NIF)</li>
+        <li id="p4" class="subtema">2.2.1 Importancia de las Normas de Información Financiera (NIF)</li>
+        <li id="p4">2.3 Estados financieros básicos</li>
+        <li id="p4" class="subtema">2.3.1 Estado de situación financiera</li>
+        <li id="p4" class="subsubtema">2.3.1.1 Estructura del estado de situación financiera</li>
+        <li id="p4" class="subsubtema">2.3.1.2 Formas de presentar el estado de situación financiera</li>
+        <li id="p4" class="subtema">2.3.2 Estado de resultados</li>
+        <li id="p4" class="subsubtema">2.3.2.1 Estructura del estado de resultados</li>
+        <li id="p4" class="subsubtema">2.3.2.2 Cuentas del estado de resultados</li>
+        <li id="p4">Cierre de la unidad temática</li>
+        <li id="p4">Evaluación</li>
     </ul>
     
 </div>

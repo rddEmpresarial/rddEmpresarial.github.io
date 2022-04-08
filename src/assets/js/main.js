@@ -71,8 +71,21 @@ function loadApp() {
 		});
 	}
 
+	var botonesUnidades = $(".unidades li");
+	for(let i=0; i<botonesUnidades.length; i++) {
+		$(botonesUnidades[i]).click(function(){
+			for(let j=0; j<botonesUnidades.length; j++) {
+				$(botonesUnidades[j]).removeClass("seleccionado");	
+			}
+			$(botonesUnidades[i]).addClass("seleccionado");
+		});
+	}
+
 }
 
+function destruir() {
+	$('.flipbook').turn("destroy");
+}
 // Load the HTML4 version if there's not CSS transform
 
 yepnope({

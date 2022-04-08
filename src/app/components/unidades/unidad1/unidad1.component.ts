@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+declare function loadApp(): any;
+declare function destruir(): any;
+
 @Component({
   selector: 'unidad1',
   templateUrl: './unidad1.component.html',
@@ -10,6 +13,7 @@ export class Unidad1Component implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    loadApp();
   }
 
 }

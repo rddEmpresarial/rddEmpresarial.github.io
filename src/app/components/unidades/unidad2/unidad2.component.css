@@ -57,13 +57,20 @@
 	margin-top: 4vh;
 }
 
-.contenido p, .contenido ul, .contenido table {
+.contenido p, .contenido ul, .contenido ol, .contenido table {
 	font-family: "Inter";
 	text-align: justify;
 	margin-left: 2.5vw;
 	margin-right: 2.5vw;
 	margin-bottom: 1vh;
 	font-size: 1.6vh;
+}
+
+.contenido video {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1vh;
 }
 
 .contenido a {
@@ -99,7 +106,11 @@
 	list-style-type: circle;
 }
 
-.contenido ul li {
+.contenido ol {
+	list-style: upper-alpha;
+}
+
+.contenido ul li, .contenido ol li {
 	margin-bottom: 0.7vh;
 }
 

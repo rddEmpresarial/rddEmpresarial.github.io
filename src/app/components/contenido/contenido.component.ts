@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { SharedService } from '../../shared/shared.service';
 
 @Component({
   selector: 'contenido',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContenidoComponent implements OnInit {
 
-  constructor() { }
+  public unidad:number = 1;
+
+  constructor(private _shared:SharedService) {
+  }
 
   ngOnInit(): void {
+    this._shared.message$
+      .subscribe(
+        message => {
+          this.unidad = message;
+        }
+      );
   }
 
 }
