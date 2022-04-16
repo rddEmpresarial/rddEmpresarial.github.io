@@ -13,7 +13,11 @@ export class Unidad1Component implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    loadApp();
+    if(localStorage.getItem('aux') != null) {
+      loadApp();
+    } else {
+      localStorage.setItem('aux', "1");
+    }
   }
 
 }
