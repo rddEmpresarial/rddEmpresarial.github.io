@@ -13,10 +13,10 @@ export class Unidad1Component implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    if(localStorage.getItem('aux') != null) {
+    if(sessionStorage.getItem('aux') != null) {
       loadApp();
     } else {
-      localStorage.setItem('aux', "1");
+      sessionStorage.setItem('aux', "1");
     }
   }
 
